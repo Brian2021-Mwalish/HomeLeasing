@@ -192,7 +192,7 @@ const PropertyDetails = () => {
                 <CardContent className="p-6">
                   <div className="text-center mb-6">
                     <p className="text-3xl font-bold text-foreground font-serif">
-                      ${property.rent.toLocaleString()}
+                      Ksh {property.rent.toLocaleString()}
                       <span className="text-base font-normal text-muted-foreground">/month</span>
                     </p>
                   </div>

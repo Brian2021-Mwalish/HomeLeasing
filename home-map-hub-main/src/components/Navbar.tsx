@@ -2,9 +2,13 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Home, Search, User, Menu, X, Building2, MessageSquare } from 'lucide-react';
+import LoginModal from './LoginModal';
+import SignupModal from './SignupModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -43,12 +47,8 @@ const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <Link to="/login">
-            <Button variant="ghost">Log In</Button>
-          </Link>
-          <Link to="/signup">
-            <Button variant="default">Sign Up</Button>
-          </Link>
+          <Button variant="ghost" onClick={() => setIsLoginModalOpen(true)}>Log In</Button>
+          <Button variant="default" onClick={() => setIsSignupModalOpen(true)}>Sign Up</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -82,16 +82,15 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-2 border-t border-border space-y-2">
-              <Link to="/login" onClick={() => setIsOpen(false)}>
-                <Button variant="ghost" className="w-full">Log In</Button>
-              </Link>
-              <Link to="/signup" onClick={() => setIsOpen(false)}>
-                <Button variant="default" className="w-full">Sign Up</Button>
-              </Link>
+              <Button variant="ghost" className="w-full" onClick={() => { setIsOpen(false); setIsLoginModalOpen(true); }}>Log In</Button>
+              <Button variant="default" className="w-full" onClick={() => { setIsOpen(false); setIsSignupModalOpen(true); }}>Sign Up</Button>
             </div>
           </div>
         </div>
       )}
+
+      <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
+      <SignupModal isOpen={isSignupModalOpen} onClose={() => setIsSignupModalOpen(false)} />
     </nav>
   );
 };

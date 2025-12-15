@@ -97,7 +97,7 @@ const SearchFilters = ({ onFilter, compact = false }: SearchFiltersProps) => {
           <Input
             id="minPrice"
             type="number"
-            placeholder="$0"
+            placeholder="KES 0"
             className="mt-1.5"
             value={filters.minPrice || ''}
             onChange={(e) => handleChange('minPrice', e.target.value ? Number(e.target.value) : undefined)}

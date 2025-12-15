@@ -31,7 +31,7 @@ const createCustomIcon = (price: number) => {
         border: 2px solid hsl(38, 92%, 50%);
         white-space: nowrap;
       ">
-        $${(price / 1000).toFixed(1)}k
+        Ksh ${(price / 1000).toFixed(1)}k
       </div>
     `,
     iconSize: [60, 30],
@@ -95,7 +95,7 @@ const MapView = ({
                       {property.title}
                     </h3>
                     <p className="text-lg font-bold text-primary mt-1">
-                      ${property.rent.toLocaleString()}/mo
+                      Ksh {property.rent.toLocaleString()}/mo
                     </p>
                     <div className="flex items-center gap-3 mt-2 text-sm text-muted-foreground">
                       <span className="flex items-center gap-1">

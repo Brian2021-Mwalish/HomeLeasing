@@ -29,7 +29,7 @@ const PropertyCard = ({ property }: PropertyCardProps) => {
           
           <div className="absolute bottom-3 left-3 right-3">
             <p className="font-serif text-2xl font-bold text-primary-foreground">
-              ${property.rent.toLocaleString()}<span className="text-sm font-sans font-normal">/mo</span>
+              Ksh {property.rent.toLocaleString()}<span className="text-sm font-sans font-normal">/mo</span>
             </p>
           </div>
         </div>
