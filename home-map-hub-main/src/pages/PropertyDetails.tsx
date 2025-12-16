@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { mockProperties, amenityIcons } from '@/data/mockData';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import MessageModal from '@/components/MessageModal';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -202,10 +203,11 @@ const PropertyDetails = () => {
                       <Calendar className="h-4 w-4 mr-2" />
                       Schedule Tour
                     </Button>
-                    <Button variant="outline" size="lg" className="w-full">
-                      <MessageSquare className="h-4 w-4 mr-2" />
-                      Message Landlord
-                    </Button>
+                    <MessageModal
+                      propertyId={property.id}
+                      propertyTitle={property.title}
+                      landlordName="Landlord"
+                    />
                   </div>
 
                   <Separator className="my-6" />

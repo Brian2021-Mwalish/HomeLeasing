@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Properties from "./pages/Properties";
 import MapSearch from "./pages/MapSearch";
 import PropertyDetails from "./pages/PropertyDetails";
+import Messages from "./pages/Messages";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/properties" element={<Properties />} />
           <Route path="/map" element={<MapSearch />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/messages" element={<Messages />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<NotFound />} />

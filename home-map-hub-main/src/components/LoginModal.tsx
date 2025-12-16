@@ -24,9 +24,12 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
   if (!isOpen) return null;
 
 
+
+
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <Card className="w-full max-w-md shadow-xl max-h-[90vh] overflow-y-auto mx-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm min-h-screen">
+      <Card className="w-full max-w-lg shadow-xl mx-auto max-h-[95vh] overflow-visible my-auto">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
             <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary">

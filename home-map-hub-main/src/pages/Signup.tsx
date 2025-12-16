@@ -33,11 +33,13 @@ const Signup = () => {
     { value: 'agent', label: 'Agent', icon: Briefcase, description: 'Manage properties' },
   ];
 
+
+
   return (
     <div className="min-h-screen bg-muted">
       <Navbar />
-      <main className="container py-16 flex items-center justify-center">
-        <Card className="w-full max-w-md shadow-xl">
+      <main className="container py-6 sm:py-16 px-4 sm:px-0 flex items-center justify-center">
+        <Card className="w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl shadow-xl mx-auto my-auto">
           <CardHeader className="text-center">
             <div className="flex justify-center mb-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary">
@@ -57,7 +59,7 @@ const Signup = () => {
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="name"
-                    placeholder="John Doe"
+                    placeholder="Brian Mwalish"
                     className="pl-10"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
