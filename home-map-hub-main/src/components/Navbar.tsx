@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Home, Search, User, Menu, X, Building2, MessageSquare } from 'lucide-react';
+import { Home, Search, User, Menu, X, MessageSquare, Building } from 'lucide-react';
 import LoginModal from './LoginModal';
 import SignupModal from './SignupModal';
 
@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: '/', label: 'Home', icon: Home },
-    { href: '/properties', label: 'Properties', icon: Building2 },
+    { href: '/properties', label: 'Properties', icon: Building },
     { href: '/map', label: 'Map Search', icon: Search },
     { href: '/messages', label: 'Messages', icon: MessageSquare },
   ];
@@ -23,11 +23,14 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
       <div className="container flex h-16 items-center justify-between">
+
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <Building2 className="h-5 w-5 text-primary-foreground" />
-          </div>
-          <span className="font-serif text-xl font-bold text-foreground">HomeLeasing</span>
+          <img 
+            src="/Logo.png" 
+            alt="Home Map Hub Logo" 
+            className="h-9 w-9 rounded-lg object-cover"
+          />
+          <span className="font-serif text-xl font-bold text-foreground">Home Map Hub</span>
         </Link>
 
         {/* Desktop Navigation */}
