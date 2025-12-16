@@ -45,9 +45,10 @@ const Footer = () => {
                 <Mail className="h-4 w-4" />
                 <span>contact@homeleasing.com</span>
               </div>
+
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+254714137834</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
